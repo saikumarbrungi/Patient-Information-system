@@ -414,8 +414,7 @@ public class MainApp {
     		            doctor.setFirstName(newFirstName);
     		        }
 
-    		        // Repeat similar steps for other fields
-
+    		        
     		        session.update(doctor);
     		        transaction.commit();
 
@@ -592,8 +591,7 @@ public class MainApp {
                 }
             }
 
-            // Repeat similar steps for other fields
-
+            
             session.update(appointment);
             transaction.commit();
 
@@ -668,15 +666,14 @@ public class MainApp {
         try (Session session = sessionFactory.openSession()) {
             Transaction transaction = session.beginTransaction();
 
-            // Gather necessary information from the user
-            // For example:
+                    
             System.out.print("Enter patient ID: ");
             long patientId = scanner.nextLong();
             scanner.nextLine(); // Consume newline
 
             System.out.print("Enter doctor ID: ");
             long doctorId = scanner.nextLong();
-            scanner.nextLine(); // Consume newline
+            scanner.nextLine(); 
 
             System.out.print("Enter diagnosis date (yyyy-MM-dd): ");
             String diagnosisDateStr = scanner.nextLine();
